@@ -1,0 +1,21 @@
+﻿@model MyResume.Domain.Entities.TextField
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeywords;
+}
+<section id="one">
+    <div class="login-box">
+            <a asp-area="admin" class="button">
+                Login
+            </a>
+        </div>
+    <div>
+
+        <p>@Html.Raw(Model.Text)</p>
+        <ul class="actions">
+            <li><a href="#" class="button">Learn More</a></li>
+        </ul>
+    </div>
+
+</section>

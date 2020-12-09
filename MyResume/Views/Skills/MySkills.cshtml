@@ -1,0 +1,33 @@
+﻿@using MyResume.Domain.Entities
+@model IQueryable<MyResume.Domain.Entities.Skill>
+@{
+    TextField textField = ViewBag.TextField;
+
+    ViewBag.Title = textField.Title;
+    ViewBag.Description = textField.MetaDescription;
+    ViewBag.Keywords = textField.MetaKeywords;
+
+}
+@{
+    Layout = null;
+}
+
+
+
+    <h2>Recent Work</h2>
+    <div class="row">
+        @if (Model.Any())
+        {
+            @foreach (Skill entity in Model)
+            {
+                <article class="col-6 col-12-xsmall work-item">
+                    <a asp-area="" asp-action="MySkills" asp-controller="Skills" asp-route-id="@entity.Id">
+                        <img src="~/images/@entity.TitleImagePath" width="400" height="300" alt="Нет картинки" />
+                    </a>
+                    <h3>@entity.Title</h3>
+                    <p>@entity.Subtitle</p>
+                </article>
+
+            }
+        }
+</div>

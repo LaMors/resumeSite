@@ -1,0 +1,23 @@
+﻿
+@model MyResume.Domain.Entities.Skill
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeywords;
+}
+
+
+<div class="div-box">
+    <h1>
+        @Model.Title
+    </h1>
+    <h2>
+        @Model.Subtitle
+    </h2>
+    <div>
+        <img src="~/images/@Model.TitleImagePath" />
+    </div>
+    <div>
+        @Html.Raw(Model.Text)
+    </div>
+</div>
