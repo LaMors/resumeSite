@@ -1626,3 +1626,17 @@ body {
 		display: block;
 	}
 }
+.skills {
+	display: block;
+
+	label {
+		display: block;
+	}
+
+	a {
+		color: _palette(accent2, fg-light);
+		text-decoration: none;
+		display: block;
+	}
+}
+

@@ -2057,3 +2057,12 @@ body.is-touch .poptrox-popup .closer {
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
     display: block; }
+
+.skills {
+  display: block; }
+  .skills label {
+    display: block; }
+  .skills a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    display: block; }

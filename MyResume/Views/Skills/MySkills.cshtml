@@ -14,20 +14,26 @@
 
 
 
-    <h2>Recent Work</h2>
-    <div class="row">
-        @if (Model.Any())
-        {
-            @foreach (Skill entity in Model)
+    <h2>My skils:</h2>
+    <div class="skills">
+        <div class="row">
+            @if (Model.Any())
             {
-                <article class="col-6 col-12-xsmall work-item">
-                    <a asp-area="" asp-action="MySkills" asp-controller="Skills" asp-route-id="@entity.Id">
-                        <img src="~/images/@entity.TitleImagePath" width="400" height="300" alt="Нет картинки" />
-                    </a>
-                    <h3>@entity.Title</h3>
-                    <p>@entity.Subtitle</p>
-                </article>
+
+                @foreach (Skill entity in Model)
+                {
+
+                    <article class="col-6 col-12-xsmall work-item">
+                        <a class="skills" asp-area="" asp-action="MySkills" asp-controller="Skills" asp-route-id="@entity.Id">
+                            <img src="~/images/@entity.TitleImagePath" width="400" height="300" alt="Нет картинки" />
+                        </a>
+                        <h3>@entity.Title</h3>
+                        <p>@entity.Subtitle</p>
+                    </article>
+
+                }
+
 
             }
-        }
-</div>
+        </div>
+    </div>
